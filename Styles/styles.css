@@ -1,0 +1,18 @@
+@import url(./menu-lateral.css);
+
+:root {
+    --cor-de-fundo-cards : #171D1F;
+    --cor-verde-destaque : #81fe88;
+    --cor-de-fundo-geral : #00090e;
+    --cor-cinza-medio-texto : #888888;
+}
+
+body {
+    background-color: var(--cor-de-fundo-geral);
+    font-family: "Prompt", sans-serif;
+}
+
+.principal {
+    width: 70%;
+    margin: 3rem auto;
+}
