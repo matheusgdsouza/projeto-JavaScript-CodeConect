@@ -15,4 +15,8 @@ body {
 .principal {
     width: 70%;
     margin: 3rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
 }
