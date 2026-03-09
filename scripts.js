@@ -1,6 +1,6 @@
-let inputBtn = document.querySelector('.botao-carregar-imagem');
-let inputFile = document.querySelector('#input-imagem');
+const uploadBtn = document.querySelector('.botao-carregar-imagem');
+const uploadInput = document.querySelector('#input-imagem');
 
-inputBtn.addEventListener('click', function() {
-    inputFile.click();
+uploadBtn.addEventListener('click', function() {
+    uploadInput.click();
 });
