@@ -1,4 +1,5 @@
 @import url(./menu-lateral.css);
+@import url(./card-principal.css);
 
 :root {
     --cor-de-fundo-cards : #171D1F;
@@ -18,5 +19,5 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 5rem;
+    gap: 2rem;
 }
