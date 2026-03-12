@@ -57,4 +57,10 @@ inputTags.addEventListener('keypress', (event) => {
     }
 
 }) 
- 
+
+// Evento de clique para remover tags
+listaTags.addEventListener('click', (event) => {
+    if (event.target.classList.contains('close-icon')) {
+        event.target.parentElement.remove();
+    }
+});
