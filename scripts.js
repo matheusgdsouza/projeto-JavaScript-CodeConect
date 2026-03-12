@@ -1,10 +1,14 @@
+// Seleção dos elementos do DOM 
+
 const uploadBtn = document.querySelector('.botao-carregar-imagem');
 const uploadInput = document.querySelector('#input-imagem');
 
+// Evento de clique para abrir o seletor de arquivos
 uploadBtn.addEventListener('click', function() {
     uploadInput.click();
 });
 
+// Função para ler o conteúdo do arquivo selecionado
 function lerConteudoDoArquivo(arquivo) {
     return new Promise((resolve, reject) => {
         const leitor = new FileReader();
@@ -21,6 +25,7 @@ function lerConteudoDoArquivo(arquivo) {
     })
 }
 
+// Manipulação do DOM para exibir a imagem selecionada e o nome do arquivo
 const imagemExemplo = document.querySelector('.img-card-principal');
 const listaImagemSelecionada = document.querySelector('.lista-imagens');
 
@@ -36,3 +41,20 @@ uploadInput.addEventListener('change', async (event) => {
         }
     }
 })
+
+// Manipulação do DOM para adicionar tags ao projeto
+const inputTags = document.getElementById('input-tags-projeto');
+const listaTags = document.querySelector('.lista-tags-projeto');
+
+inputTags.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        const tag = inputTags.value.trim();
+        if (tag) {
+            listaTags.innerHTML += `<li>${tag}<img src="img/close-black.svg" alt="Ícone de fechar" class="close-icon"></li>`;
+            inputTags.value = '';
+        }
+    }
+
+}) 
+ 

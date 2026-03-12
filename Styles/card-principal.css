@@ -143,6 +143,22 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.lista-tags-projeto li {
+    background-color: var(--cor-cinza-medio-texto);
+    color: black;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 /* Estilização dos botões */
