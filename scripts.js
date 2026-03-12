@@ -20,3 +20,19 @@ function lerConteudoDoArquivo(arquivo) {
         leitor.readAsDataURL(arquivo);
     })
 }
+
+const imagemExemplo = document.querySelector('.img-card-principal');
+const listaImagemSelecionada = document.querySelector('.lista-imagens');
+
+uploadInput.addEventListener('change', async (event) => {
+    const arquivos = event.target.files[0]; 
+    if (arquivos) { 
+        try {
+            const conteudoDoArquivo = await lerConteudoDoArquivo(arquivos);
+            imagemExemplo.src = conteudoDoArquivo.url;
+            listaImagemSelecionada.innerHTML = `<li>${conteudoDoArquivo.nome}</li>`;
+        } catch (erro) {
+            console.error(erro);
+        }
+    }
+})
