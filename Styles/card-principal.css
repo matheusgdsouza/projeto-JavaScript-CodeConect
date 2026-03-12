@@ -161,6 +161,10 @@
     
 }
 
+.close-icon {
+    cursor: pointer;
+}
+
 /* Estilização dos botões */
 
 .container-botoes-projeto {
