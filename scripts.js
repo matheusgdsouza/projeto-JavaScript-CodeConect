@@ -51,7 +51,7 @@ inputTags.addEventListener('keypress', (event) => {
         event.preventDefault();
         const tag = inputTags.value.trim();
         if (tag) {
-            listaTags.innerHTML += `<li>${tag}<img src="img/close-black.svg" alt="Ícone de fechar" class="close-icon"></li>`;
+            listaTags.innerHTML += `<li class="tag">${tag}<img src="img/close-black.svg" alt="Ícone de fechar" class="close-icon"></li>`;
             inputTags.value = '';
         }
     }
@@ -64,3 +64,28 @@ listaTags.addEventListener('click', (event) => {
         event.target.parentElement.remove();
     }
 });
+
+// Recebendo informações do formulário
+const inputNomeProjeto = document.querySelector('#input-nome-projeto');
+const descricaoProjeto = document.querySelector('#input-descricao-projeto');
+const btnPublicar = document.querySelector('.botao-publicar-projeto');
+
+btnPublicar.addEventListener('click', () => {
+    const nomeProjeto = inputNomeProjeto.value.trim();
+    const descricao = descricaoProjeto.value.trim();
+    const tags = Array.from(listaTags.querySelectorAll('.tag')).map(tag => tag.textContent.trim());
+    const imagem = imagemExemplo.src;
+    console.log({ nomeProjeto, descricao, tags, imagem });
+
+})
+
+//Descartar projeto
+const btnDescartar = document.querySelector('.botao-descartar-projeto');
+
+btnDescartar.addEventListener('click', () => {
+    inputNomeProjeto.value = '';
+    descricaoProjeto.value = '';
+    listaTags.innerHTML = '';
+    imagemExemplo.src = './img/imagem1.png';
+    listaImagemSelecionada.innerHTML = '';
+})
