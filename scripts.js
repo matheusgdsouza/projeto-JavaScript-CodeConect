@@ -70,7 +70,8 @@ const inputNomeProjeto = document.querySelector('#input-nome-projeto');
 const descricaoProjeto = document.querySelector('#input-descricao-projeto');
 const btnPublicar = document.querySelector('.botao-publicar-projeto');
 
-btnPublicar.addEventListener('click', () => {
+btnPublicar.addEventListener('click', (event) => {
+    event.preventDefault();
     const nomeProjeto = inputNomeProjeto.value.trim();
     if(!nomeProjeto){
         alert('O nome do projeto é obrigatório!');
@@ -97,7 +98,8 @@ btnPublicar.addEventListener('click', () => {
 //Descartar projeto
 const btnDescartar = document.querySelector('.botao-descartar-projeto');
 
-btnDescartar.addEventListener('click', () => {
+btnDescartar.addEventListener('click', (event) => {
+    event.preventDefault();
     inputNomeProjeto.value = '';
     descricaoProjeto.value = '';
     listaTags.innerHTML = '';
