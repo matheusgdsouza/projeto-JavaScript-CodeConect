@@ -10,7 +10,7 @@ A aplicação simula o carregamento e exibição de dados de forma assíncrona, 
 
 Acesse a aplicação online:
 
-👉 **[Ver Projeto Online]([COLE_AQUI_O_LINK_DO_DEPLOY](https://projeto-java-script-code-conect.vercel.app/))**
+👉 **[Ver Projeto Online]([(https://projeto-java-script-code-conect.vercel.app/))**
 
 ---
 
