@@ -72,10 +72,25 @@ const btnPublicar = document.querySelector('.botao-publicar-projeto');
 
 btnPublicar.addEventListener('click', () => {
     const nomeProjeto = inputNomeProjeto.value.trim();
+    if(!nomeProjeto){
+        alert('O nome do projeto é obrigatório!');
+        return;
+    }
     const descricao = descricaoProjeto.value.trim();
+    if(!descricao) {
+        alert('A descrição do projeto é obrigatória!');
+        return;
+    }
     const tags = Array.from(listaTags.querySelectorAll('.tag')).map(tag => tag.textContent.trim());
     const imagem = imagemExemplo.src;
     console.log({ nomeProjeto, descricao, tags, imagem });
+
+    inputNomeProjeto.value = '';
+    descricaoProjeto.value = '';
+    listaTags.innerHTML = '';
+    imagemExemplo.src = './img/imagem1.png';
+    listaImagemSelecionada.innerHTML = '';
+    uploadInput.value = '';
 
 })
 
@@ -88,4 +103,7 @@ btnDescartar.addEventListener('click', () => {
     listaTags.innerHTML = '';
     imagemExemplo.src = './img/imagem1.png';
     listaImagemSelecionada.innerHTML = '';
+    uploadInput.value = '';
 })
+
+
